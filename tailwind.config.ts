@@ -47,10 +47,10 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        warm: {
-          DEFAULT: "hsl(35 85% 60%)",
-          light: "hsl(35 85% 70%)",
-          dark: "hsl(25 75% 47%)",
+        gold: {
+          DEFAULT: "hsl(45 95% 55%)",
+          light: "hsl(45 95% 65%)",
+          dark: "hsl(38 92% 50%)",
         },
       },
       fontFamily: {
@@ -61,6 +61,7 @@ export default {
         soft: "var(--shadow-soft)",
         medium: "var(--shadow-medium)",
         large: "var(--shadow-large)",
+        gold: "var(--shadow-gold)",
       },
       borderRadius: {
         lg: "var(--radius)",

@@ -59,12 +59,13 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-32 px-6 bg-gradient-to-b from-secondary/30 to-background">
+    <section id="contact" className="py-20 md:py-32 px-6 bg-gradient-to-b from-card/50 to-background">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="font-serif text-4xl md:text-6xl text-foreground mb-4">
+          <h2 className="font-serif text-4xl md:text-6xl text-primary mb-4">
             Let's Create Something Special
           </h2>
+          <div className="w-24 h-px bg-primary mx-auto mb-4" />
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Ready to make your next event unforgettable? Get in touch with us today
           </p>
@@ -73,8 +74,8 @@ const Contact = () => {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Contact Info */}
           <div className="space-y-8 animate-slide-up">
-            <div className="bg-card rounded-3xl p-8 shadow-soft">
-              <h3 className="font-serif text-2xl text-foreground mb-6">Get in Touch</h3>
+            <div className="bg-card border border-border rounded-3xl p-8 shadow-soft">
+              <h3 className="font-serif text-2xl text-primary mb-6">Get in Touch</h3>
               
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
@@ -109,15 +110,15 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl p-8">
-              <h4 className="font-serif text-xl text-foreground mb-3">Operating Hours</h4>
-              <p className="text-muted-foreground">Monday - Saturday: 9:00 AM - 6:00 PM</p>
-              <p className="text-muted-foreground">Sunday: By appointment only</p>
+            <div className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-3xl p-8">
+              <h4 className="font-serif text-xl text-primary mb-3">Operating Hours</h4>
+              <p className="text-foreground/80">Monday - Saturday: 9:00 AM - 6:00 PM</p>
+              <p className="text-foreground/80">Sunday: By appointment only</p>
             </div>
           </div>
 
           {/* Contact Form */}
-          <form onSubmit={handleSubmit} className="bg-card rounded-3xl p-8 shadow-soft animate-slide-up space-y-6">
+          <form onSubmit={handleSubmit} className="bg-card border border-border rounded-3xl p-8 shadow-soft animate-slide-up space-y-6">
             <div className="space-y-2">
               <Label htmlFor="name" className="text-foreground font-medium">
                 Your Name *
@@ -183,7 +184,7 @@ const Contact = () => {
             <Button
               type="submit"
               size="lg"
-              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-medium text-lg py-6 rounded-full shadow-medium hover:shadow-large transition-all duration-300 flex items-center justify-center gap-2"
+              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-medium text-lg py-6 rounded-full shadow-gold hover:shadow-[0_0_40px_rgba(234,179,8,0.3)] transition-all duration-300 flex items-center justify-center gap-2"
             >
               <Send className="w-5 h-5" />
               Send Message
