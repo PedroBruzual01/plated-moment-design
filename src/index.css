@@ -8,46 +8,48 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Luxury dark theme with gold accents */
-    --background: 0 0% 7%;
-    --foreground: 40 15% 85%;
+    /* Modern, warm, and welcoming palette */
+    --background: 35 25% 97%;
+    --foreground: 25 15% 20%;
 
-    --card: 0 0% 10%;
-    --card-foreground: 40 15% 85%;
+    --card: 0 0% 100%;
+    --card-foreground: 25 15% 20%;
 
-    --popover: 0 0% 10%;
-    --popover-foreground: 40 15% 85%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 15% 20%;
 
-    --primary: 45 100% 51%;
-    --primary-foreground: 0 0% 7%;
+    --primary: 25 75% 47%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 45 100% 51%;
+    --secondary: 35 20% 92%;
+    --secondary-foreground: 25 15% 20%;
 
-    --muted: 0 0% 20%;
-    --muted-foreground: 40 10% 55%;
+    --muted: 35 15% 90%;
+    --muted-foreground: 25 10% 45%;
 
-    --accent: 45 100% 51%;
-    --accent-foreground: 0 0% 7%;
+    --accent: 35 85% 60%;
+    --accent-foreground: 25 15% 20%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 40 15% 85%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 15%;
-    --ring: 45 100% 51%;
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
+    --ring: 25 75% 47%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    /* Gold gradient */
-    --gradient-gold: linear-gradient(135deg, hsl(45 100% 51%), hsl(38 92% 50%));
+    /* Modern gradients */
+    --gradient-warm: linear-gradient(135deg, hsl(35 85% 60%), hsl(25 75% 47%));
+    --gradient-subtle: linear-gradient(180deg, hsl(35 25% 97%), hsl(0 0% 100%));
     
-    /* Elegant shadows */
-    --shadow-gold: 0 4px 20px hsl(45 100% 51% / 0.15);
-    --shadow-elegant: 0 10px 40px hsl(0 0% 0% / 0.5);
+    /* Soft shadows */
+    --shadow-soft: 0 4px 20px hsl(25 15% 20% / 0.08);
+    --shadow-medium: 0 10px 40px hsl(25 15% 20% / 0.12);
+    --shadow-large: 0 20px 60px hsl(25 15% 20% / 0.15);
 
     /* Smooth transitions */
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 

@@ -22,33 +22,35 @@ const Gallery = () => {
   ];
 
   return (
-    <section id="gallery" className="py-24 px-6 bg-background">
+    <section id="gallery" className="py-20 md:py-32 px-6 bg-gradient-to-b from-background to-secondary/30">
       <div className="container mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="font-serif text-5xl md:text-6xl text-primary mb-4">
-            Our Creations
+          <h2 className="font-serif text-4xl md:text-6xl text-foreground mb-4">
+            Our Culinary Artistry
           </h2>
-          <div className="w-24 h-px bg-primary mx-auto" />
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+            Every dish is a masterpiece, crafted with passion and presented with elegance
+          </p>
         </div>
 
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Gallery Grid - Modern masonry-style layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {images.map((image, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-lg aspect-square animate-scale-in"
+              className="group relative overflow-hidden rounded-2xl bg-card shadow-soft hover:shadow-large transition-all duration-500 animate-scale-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              {/* Overlay on hover */}
-              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <div className="w-16 h-px bg-primary" />
+              <div className="aspect-square overflow-hidden">
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
               </div>
+              {/* Subtle overlay on hover */}
+              <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
           ))}
         </div>

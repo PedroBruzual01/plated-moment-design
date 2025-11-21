@@ -47,15 +47,20 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        gold: {
-          DEFAULT: "hsl(45 100% 51%)",
-          light: "hsl(45 100% 65%)",
-          dark: "hsl(38 92% 50%)",
+        warm: {
+          DEFAULT: "hsl(35 85% 60%)",
+          light: "hsl(35 85% 70%)",
+          dark: "hsl(25 75% 47%)",
         },
       },
       fontFamily: {
         serif: ["Playfair Display", "serif"],
         sans: ["Inter", "sans-serif"],
+      },
+      boxShadow: {
+        soft: "var(--shadow-soft)",
+        medium: "var(--shadow-medium)",
+        large: "var(--shadow-large)",
       },
       borderRadius: {
         lg: "var(--radius)",
