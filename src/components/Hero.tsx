@@ -12,10 +12,14 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-secondary/30 to-background">
-      {/* Decorative elements */}
-      <div className="absolute top-20 right-20 w-72 h-72 bg-accent/5 rounded-full blur-3xl" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-card to-background">
+      {/* Elegant gold accent orbs */}
+      <div className="absolute top-20 right-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
       <div className="absolute bottom-20 left-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      
+      {/* Subtle gold lines */}
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
 
       <div className="relative z-10 container mx-auto px-6 text-center animate-fade-in">
         {/* Logo Image */}
@@ -39,7 +43,7 @@ const Hero = () => {
           <Button 
             onClick={scrollToContact}
             size="lg"
-            className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium text-lg px-8 py-6 rounded-full shadow-medium hover:shadow-large transition-all duration-300"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium text-lg px-8 py-6 rounded-full shadow-gold hover:shadow-[0_0_40px_rgba(234,179,8,0.3)] transition-all duration-300"
           >
             Get in Touch
           </Button>
@@ -55,7 +59,7 @@ const Hero = () => {
 
         {/* Scroll indicator */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-          <ArrowDown className="w-6 h-6 text-muted-foreground" />
+          <ArrowDown className="w-6 h-6 text-primary" />
         </div>
       </div>
     </section>

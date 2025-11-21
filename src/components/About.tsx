@@ -24,9 +24,10 @@ const About = () => {
       <div className="container mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="font-serif text-4xl md:text-6xl text-foreground mb-4">
+          <h2 className="font-serif text-4xl md:text-6xl text-primary mb-4">
             Why Choose Us
           </h2>
+          <div className="w-24 h-px bg-primary mx-auto mb-4" />
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             We're passionate about creating unforgettable culinary experiences that make your events truly special
           </p>
@@ -40,7 +41,7 @@ const About = () => {
               className="text-center group animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+              <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground group-hover:shadow-gold transition-all duration-300">
                 <feature.icon className="w-8 h-8" />
               </div>
               <h3 className="font-serif text-2xl text-foreground mb-3">
@@ -55,7 +56,7 @@ const About = () => {
 
         {/* Main Content */}
         <div className="max-w-4xl mx-auto animate-fade-in">
-          <div className="bg-gradient-to-br from-secondary/50 to-background rounded-3xl p-8 md:p-12 shadow-soft">
+          <div className="bg-gradient-to-br from-secondary to-background border border-border/50 rounded-3xl p-8 md:p-12 shadow-soft">
             <div className="space-y-6 text-lg text-foreground/90 leading-relaxed">
               <p>
                 At <span className="font-serif text-primary font-semibold">Plated Moment</span>, we believe 
