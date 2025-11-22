@@ -54,7 +54,7 @@ export default {
         },
       },
       fontFamily: {
-        serif: ["Playfair Display", "serif"],
+        serif: ["Great Vibes", "cursive"],
         sans: ["Inter", "sans-serif"],
       },
       boxShadow: {
