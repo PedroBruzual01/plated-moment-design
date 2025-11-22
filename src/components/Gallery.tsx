@@ -45,11 +45,11 @@ const Gallery = () => {
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {images.map((image, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-2xl bg-card shadow-soft hover:shadow-gold transition-all duration-500 animate-scale-in"
+              className="group relative overflow-hidden bg-card shadow-soft hover:shadow-gold transition-all duration-500 animate-scale-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="aspect-square overflow-hidden">
@@ -60,7 +60,7 @@ const Gallery = () => {
                 />
               </div>
               {/* Gold border glow on hover */}
-              <div className="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/40 rounded-2xl transition-all duration-300" />
+              <div className="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/40 transition-all duration-300" />
               {/* Subtle overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
