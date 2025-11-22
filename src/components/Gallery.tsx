@@ -8,6 +8,7 @@ import gallery6 from "@/assets/gallery-6.jpeg";
 import gallery7 from "@/assets/gallery-7.jpeg";
 import gallery8 from "@/assets/gallery-8.jpeg";
 import gallery9 from "@/assets/gallery-9.jpeg";
+import gallery10 from "@/assets/gallery-10.jpeg";
 
 const Gallery = () => {
   const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.1 });
@@ -18,7 +19,7 @@ const Gallery = () => {
     { src: gallery3, alt: "Luxurious grazing table spread" },
     { src: gallery4, alt: "Rustic bread and charcuterie display" },
     { src: gallery5, alt: "Italian meatballs with premium presentation" },
-    { src: gallery6, alt: "Elegant cheese and charcuterie board" },
+    { src: gallery10, alt: "Elegant cheese and charcuterie board" },
     { src: gallery7, alt: "Premium charcuterie board with artisanal selections" },
     { src: gallery8, alt: "Elaborate dessert table with pastries and treats" },
     { src: gallery9, alt: "Gourmet cheese and charcuterie platter" },
