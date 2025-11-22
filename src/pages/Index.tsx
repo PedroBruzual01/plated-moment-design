@@ -1,3 +1,4 @@
+import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Gallery from "@/components/Gallery";
 import About from "@/components/About";
@@ -7,6 +8,7 @@ import { Heart } from "lucide-react";
 const Index = () => {
   return (
     <main className="min-h-screen bg-background">
+      <Navigation />
       <Hero />
       <Gallery />
       <About />
