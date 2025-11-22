@@ -48,9 +48,9 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         gold: {
-          DEFAULT: "hsl(45 95% 55%)",
-          light: "hsl(45 95% 65%)",
-          dark: "hsl(38 92% 50%)",
+          DEFAULT: "hsl(43 74% 47%)",
+          light: "hsl(43 74% 57%)",
+          dark: "hsl(38 72% 42%)",
         },
       },
       fontFamily: {

@@ -83,7 +83,7 @@ const Contact = () => {
           {/* Contact Info */}
           <div className="space-y-8 animate-slide-up">
             <div className="bg-card border border-border rounded-3xl p-8 shadow-soft">
-              <h3 className="font-serif text-2xl text-primary mb-6">Get in Touch</h3>
+              <h3 className="text-2xl text-primary mb-6 font-semibold">Get in Touch</h3>
               
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
@@ -119,7 +119,7 @@ const Contact = () => {
             </div>
 
             <div className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-3xl p-8">
-              <h4 className="font-serif text-xl text-primary mb-3">Operating Hours</h4>
+              <h4 className="text-xl text-primary mb-3 font-semibold">Operating Hours</h4>
               <p className="text-foreground/80">Monday - Saturday: 9:00 AM - 6:00 PM</p>
               <p className="text-foreground/80">Sunday: By appointment only</p>
             </div>
