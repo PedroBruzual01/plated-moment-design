@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -7,6 +8,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Send, Mail, Phone, MapPin } from "lucide-react";
 
 const Contact = () => {
+  const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.1 });
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
@@ -59,7 +61,13 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-32 px-6 bg-gradient-to-b from-card/50 to-background">
+    <section 
+      id="contact" 
+      ref={ref}
+      className={`py-20 md:py-32 px-6 bg-gradient-to-b from-card/50 to-background transition-all duration-1000 ${
+        isIntersecting ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
+      }`}
+    >
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="font-serif text-4xl md:text-6xl text-primary mb-4">

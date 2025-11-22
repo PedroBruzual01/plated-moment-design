@@ -1,3 +1,4 @@
+import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import gallery1 from "@/assets/gallery-1.jpeg";
 import gallery2 from "@/assets/gallery-2.jpeg";
 import gallery3 from "@/assets/gallery-3.jpeg";
@@ -9,6 +10,8 @@ import gallery8 from "@/assets/gallery-8.jpeg";
 import gallery9 from "@/assets/gallery-9.jpeg";
 
 const Gallery = () => {
+  const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.1 });
+  
   const images = [
     { src: gallery1, alt: "Gourmet desserts in elegant glass jars" },
     { src: gallery2, alt: "Artisanal charcuterie boards with decorative presentation" },
@@ -22,7 +25,13 @@ const Gallery = () => {
   ];
 
   return (
-    <section id="gallery" className="py-20 md:py-32 px-6 bg-gradient-to-b from-background to-card/50">
+    <section 
+      id="gallery" 
+      ref={ref}
+      className={`py-20 md:py-32 px-6 bg-gradient-to-b from-background to-card/50 transition-all duration-1000 ${
+        isIntersecting ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
+      }`}
+    >
       <div className="container mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">

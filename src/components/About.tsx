@@ -1,6 +1,9 @@
 import { Heart, Award, Users } from "lucide-react";
+import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 
 const About = () => {
+  const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.1 });
+  
   const features = [
     {
       icon: Heart,
@@ -20,7 +23,13 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 md:py-32 px-6 bg-card">
+    <section 
+      id="about" 
+      ref={ref}
+      className={`py-20 md:py-32 px-6 bg-card transition-all duration-1000 ${
+        isIntersecting ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
+      }`}
+    >
       <div className="container mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
