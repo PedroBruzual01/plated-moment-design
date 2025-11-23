@@ -6,14 +6,6 @@
 All colors MUST be HSL.
 */
 
-@font-face {
-  font-family: 'Lost in South';
-  src: url('/fonts/LostInSouth.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 @layer base {
   :root {
     /* Sophisticated dark theme with gold accents */
