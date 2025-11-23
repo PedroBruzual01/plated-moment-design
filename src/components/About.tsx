@@ -53,7 +53,7 @@ const About = () => {
               <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground group-hover:shadow-gold transition-all duration-300">
                 <feature.icon className="w-8 h-8" />
               </div>
-              <h3 className="text-2xl text-foreground mb-3 font-semibold">
+              <h3 className="text-2xl text-primary mb-3 font-semibold">
                 {feature.title}
               </h3>
               <p className="text-muted-foreground leading-relaxed">

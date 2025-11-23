@@ -106,7 +106,7 @@ emailjs.send(
                   </div>
                   <div>
                     <h4 className="font-medium text-foreground mb-1">Email</h4>
-                    <p className="text-muted-foreground">hello@platedmoment.com</p>
+                    <p className="text-muted-foreground">hello@platedmoment.co.uk</p>
                   </div>
                 </div>
 
