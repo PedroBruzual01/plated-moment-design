@@ -17,7 +17,7 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Basic validation
@@ -41,14 +41,40 @@ const Contact = () => {
       return;
     }
 
-    // Success message
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out! We'll get back to you soon.",
-    });
+    try {
+      // Send email via edge function
+      const response = await fetch(
+        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
-    // Reset form
-    setFormData({ name: "", email: "", phone: "", message: "" });
+      if (!response.ok) {
+        throw new Error("Failed to send email");
+      }
+
+      // Success message
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for reaching out! We'll get back to you soon.",
+      });
+
+      // Reset form
+      setFormData({ name: "", email: "", phone: "", message: "" });
+    } catch (error) {
+      console.error("Error sending email:", error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    }
   };
 
   const handleChange = (
@@ -81,7 +107,7 @@ const Contact = () => {
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Contact Info */}
-          <div className="space-y-8 animate-slide-up">
+          <div className="space-y-8 animate-slide-up mx-auto w-full md:mx-0">
             <div className="bg-card border border-border rounded-3xl p-8 shadow-soft">
               <h3 className="text-2xl text-primary mb-6 font-semibold">Get in Touch</h3>
               
@@ -126,7 +152,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <form onSubmit={handleSubmit} className="bg-card border border-border rounded-3xl p-8 shadow-soft animate-slide-up space-y-6">
+          <form onSubmit={handleSubmit} className="bg-card border border-border rounded-3xl p-8 shadow-soft animate-slide-up space-y-6 mx-auto w-full md:mx-0">
             <div className="space-y-2">
               <Label htmlFor="name" className="text-foreground font-medium">
                 Your Name *
