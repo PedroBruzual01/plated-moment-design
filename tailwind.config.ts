@@ -54,7 +54,7 @@ export default {
         },
       },
       fontFamily: {
-        serif: ["Great Vibes", "cursive"],
+        serif: ["LostInSouth", "cursive"],
         sans: ["Inter", "sans-serif"],
       },
       boxShadow: {

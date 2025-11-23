@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'LostInSouth';
+  src: url('/fonts/LostInSouth.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

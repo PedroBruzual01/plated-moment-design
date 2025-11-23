@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Send, Mail, Phone, MapPin } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.1 });
@@ -41,14 +42,27 @@ const Contact = () => {
       return;
     }
 
-    // Success message
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out! We'll get back to you soon.",
-    });
-
-    // Reset form
-    setFormData({ name: "", email: "", phone: "", message: "" });
+emailjs.send(
+    "service_n5flx5p",
+    "template_vyhbe3v",
+    formData,
+    "_SjQroAImgu9nUW34"
+  ).then(
+    (result) => {
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for reaching out! We'll get back to you soon.",
+      });
+      setFormData({ name: "", email: "", phone: "", message: "" });
+    },
+    (error) => {
+      toast({
+        title: "Error Sending Message",
+        description: "Something went wrong. Please try again later.",
+        variant: "destructive",
+      });
+    }
+  );
   };
 
   const handleChange = (
@@ -102,7 +116,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-foreground mb-1">Phone</h4>
-                    <p className="text-muted-foreground">(555) 123-4567</p>
+                    <p className="text-muted-foreground">+44 7737 464977</p>
                   </div>
                 </div>
 
@@ -112,7 +126,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-foreground mb-1">Location</h4>
-                    <p className="text-muted-foreground">Serving the greater metropolitan area</p>
+                    <p className="text-muted-foreground">Serving the greater London metropolitan area</p>
                   </div>
                 </div>
               </div>
